@@ -5,30 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Bike Comparison</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #daf5db;
+            color: black;
+            text-align: center;
+            padding: 20px 10px;
+            border-radius: 1px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* Main Content */
+        main {
+            margin: 20px auto;
+            max-width: 1200px;
+            text-align: center;
+        }
+
         iframe {
-            width: 90%;
-            height: 80vh;
-            border: 1px solid #ccc;
+            width: 100%;
+            height: 80vh; /* 80% of the viewport height */
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
             margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            iframe {
+                height: 60vh;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>E-Bike Comparison</h1>
-    <iframe
-        class="airtable-embed"
+    <!-- Header -->
+    <header>
+        <h1>E-Bike Comparison</h1>
+        <p>Find the perfect e-bike by comparing features like range, speed, weight, and more!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <iframe
         src="https://airtable.com/embed/appLuMpoUJaN9ZrPo/shr7HU7CSu56q8GAo?viewControls=on"
-        frameborder="0"
-        onmousewheel=""
-        width="100%"
-        height="533"
-        style="background: transparent; border: 1px solid #ccc;"
-    ></iframe>
+            frameborder="0"
+        ></iframe>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Powered by <a href="https://airtable.com" target="_blank">Airtable</a>. Designed with ❤️ for e-bike enthusiasts.</p>
+    </footer>
 </body>
 </html>
+
